@@ -7,6 +7,7 @@ public static void main(String[] args) {
 
 		int alumnesNotes [][] = new int[5][3];
 		
+// entrada de les dades per consola dins de array de 5 alumnes x 3 notes
 		
 			for (int i=0; i<alumnesNotes.length; i++) {
 				for (int j=0; j<alumnesNotes[i].length; j++) {
@@ -18,14 +19,17 @@ public static void main(String[] args) {
 				}
 			}
 			
+// bucle per recórrer 5 cops el array tenint en compte la seva llargada
 			
-	for (int bucle=0; bucle<alumnesNotes.length; bucle++ ){
+	for (int bucle=0; bucle<alumnesNotes.length; bucle++ ){  
 		int acumbucle=bucle+1;
 
-		
+
+// doble bucle for per recórrer l'array tenint en compte el bucle anterior, per a l'alumne i recorrerà bucle vegades l'array i farà el promig 
+
 			int suma = 0;
 			int elements = 0;
-			for (int i=0; i<alumnesNotes.length; i++) {
+			for (int i=0; i<alumnesNotes.length; i++) {			
 				for (int j=0; j<alumnesNotes[i].length; j++) {
 					int valors = alumnesNotes [bucle][j];
 					suma = suma + valors;
@@ -33,7 +37,7 @@ public static void main(String[] args) {
 				}				
 			}
 			
-			float promig= (float) suma / elements;
+			float promig= (float) suma / elements;       // càlcul del promig 
 			System.out.println("-------------------");	
 			System.out.println("El promig de l'alumne " +acumbucle+"  és :" + promig);			
 			if (promig <5 ) {
